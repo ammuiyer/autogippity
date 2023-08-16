@@ -1,0 +1,10 @@
+/Users/swapnaiyer/autogippity/web_template/target/debug/deps/actix_cors-84be9ce9d7f41975.rmeta: /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/lib.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/all_or_some.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/builder.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/error.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/inner.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/middleware.rs
+
+/Users/swapnaiyer/autogippity/web_template/target/debug/deps/actix_cors-84be9ce9d7f41975.d: /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/lib.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/all_or_some.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/builder.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/error.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/inner.rs /Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/middleware.rs
+
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/lib.rs:
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/all_or_some.rs:
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/builder.rs:
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/error.rs:
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/inner.rs:
+/Users/swapnaiyer/.cargo/registry/src/index.crates.io-6f17d22bba15001f/actix-cors-0.6.4/src/middleware.rs:
