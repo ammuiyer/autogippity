@@ -113,6 +113,37 @@ async fn create_task(app_state: web::Data<AppState>, task: web::Json<Task>)  -> 
     HttpResponse::Ok().finish()
 }
 
+async fn read_all_tasks(app_state: web::Data<AppState>)  -> impl Responder {
+    let mut db  = app_state.db.lock().unwrap();
+    let tasks: Vec<&Task> = db.get_all();
+    HttpResponse::Ok().json(tasks)
+
+}
+
+async fn read_task(app_state: web::Data<AppState>, id: web::Path<u64>)  -> impl Responder {
+    let mut db  = app_state.db.lock().unwrap();
+    match db.get(&id.into_inner())  {
+        Some(task) => HttpResponse::Ok().json(task),
+        None => HttpResponse::NotFound().finish()
+    }
+}
+
+async fn update_task(app_state: web::Data<AppState>, task: web::Json<Task>)  -> impl Responder {
+    let mut db  = app_state.db.lock().unwrap();
+    db.update(task.into_inner());
+    let _ =  db.save_to_file();
+    HttpResponse::Ok().finish()
+}
+
+async fn delete_task(app_state: web::Data<AppState>, id: web::Path<u64>)  -> impl Responder {
+    let mut db  = app_state.db.lock().unwrap();
+    db.delete(&id.into_inner());
+    let _ =  db.save_to_file();
+    HttpResponse::Ok().finish()
+}
+
+
+
 #[actix_web::main]
 async  fn main() ->  std::io::Result<()> {
     let  db: Database =  match Database::load_from_file()  {
@@ -139,6 +170,11 @@ async  fn main() ->  std::io::Result<()> {
             )
             .app_data(data.clone())
             .route("/task", web::post().to(create_task))
+            .route("/task", web::get().to(read_all_tasks))
+            .route("/task", web::get().to(read_task))
+            .route("/task/{id}", web::put().to(update_task))
+            .route("/task/{id}", web::delete().to(delete_task))
+
     })
     .bind("127.0.0.1:8080")?
     .run()
